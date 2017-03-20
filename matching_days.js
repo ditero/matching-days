@@ -21,7 +21,6 @@ var dayM = function matchDays(){
      //If days match Shade them with GREEN Color.
       if(stDay === ndDay){
 
-          console.log(listDays[stDay]);
            listDays[stDay].className = 'paintDay';
       }
       // else days do'nt match shade them with different Colors Red and Blue.
