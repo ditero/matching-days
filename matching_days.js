@@ -9,7 +9,7 @@ var thisDay = document.getElementById('firstDate');
 var thatDay = document.getElementById('secDate');
 
 //Match Days
-var dayM = function matchDays(){
+var dayMatch = function matchDays(){
 
   var dayOne = new Date(thisDay.value);
   var dayTwo = new Date(thatDay.value);
@@ -31,7 +31,7 @@ var dayM = function matchDays(){
 
       }
 };
-//Reset the table i.e  the unshade all the columns.
+//Reset the table i.e  unshade all the columns.
 function reFresh(){
   for (var i = 0; i < listDays.length; i++) {
     listDays[i].classList.remove('paintDay');
@@ -39,5 +39,6 @@ function reFresh(){
     listDays[i].classList.remove('paintDayBlue');
   }
 };
-//Add Event Listener to the Button to trigger the processs.
-btnCmp.addEventListener('click',dayM);
+//Add Event Listener to the date inputs to trigger the processs.
+thisDay.addEventListener('change',dayMatch);
+thatDay.addEventListener('change',dayMatch);
